@@ -1,38 +1,174 @@
-.App {
+/* === 기본 설정 === */
+body {
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+  background: #f8fafc;
+}
+
+/* === 컨테이너 === */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === 헤더 === */
+.header {
+  background: #2563eb;
+  color: white;
+  padding: 1rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Hero 섹션 === */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: white;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+/* === 버튼 === */
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #1e40af;
+}
+
+/* === 서비스 카드 섹션 === */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* === 회사 소개 & 문의하기 === */
+.about,
+.contact {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f1f5f9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.75rem;
+  max-width: 400px;
+  margin: 1rem auto 0;
 }
 
-.App-link {
-  color: #61dafb;
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* === 푸터 === */
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+.drawer-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.4);
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding-top: 50px;
+z-index: 50;
+}
+
+
+.drawer {
+background: white;
+width: 90%;
+max-width: 400px;
+border-radius: 12px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+padding: 1.5rem;
+animation: slideDown 0.3s ease;
+}
+
+
+@keyframes slideDown {
+from { transform: translateY(-50px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
+
+
+.drawer h3 {
+margin-top: 0;
+margin-bottom: 1rem;
+font-size: 1.25rem;
+}
+
+
+.drawer ul {
+text-align: left;
+margin-bottom: 1rem;
+}
+
+
+.drawer li {
+margin-bottom: 0.5rem;
 }
