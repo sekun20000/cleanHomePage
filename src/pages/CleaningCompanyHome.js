@@ -25,7 +25,27 @@ export default function CleaningCompanyHome() {
           </nav>
         </div>
       </header>
-s
+
+      <section className="hero">
+        <h2>깨끗함을 약속합니다</h2>
+        <p>전문 청소 서비스로 집과 사무실을 새 것처럼!</p>
+        <button className="btn-primary" onClick={() => setShowDrawer(true)}>지금 예약하기</button>
+      </section>
+
+      <section id="services" className="services">
+        {["가정 청소", "사무실 청소", "입주 청소"].map((service, index) => (
+          <div key={index} className="card">
+            <h3>{service}</h3>
+            <p>전문 인력이 꼼꼼하게 청소합니다.</p>
+          </div>
+        ))}
+      </section>
+
+      <section id="about" className="about">
+        <h3>회사 소개</h3>
+        <p>
+          저희 청소의 달인은 10년 이상의 경력을 바탕으로 고객님께 최고의 청결을 제공합니다.
+          합리적인 가격, 친절한 서비스로 만족을 드립니다.
         </p>
       </section>
 
